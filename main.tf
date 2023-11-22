@@ -13,7 +13,7 @@ terraform {
   backend "s3" {
     bucket = "state-terraform-s3-ceb-vpc-dev"
     key    = "dev/europe/central-1/ceb-vpc1-eu-central-dev"
-    region = "us-central-1"
+    region = "eu-central-1"
   }
 
   required_version = "~> 1.6.0"  # Specify the minimum required Terraform version here
