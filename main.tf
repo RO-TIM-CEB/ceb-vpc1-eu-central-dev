@@ -57,7 +57,7 @@ module "vpc" {
 
 
 #Networking
-vpc_ciddr = var.ciddr
+vpc_ciddr = var.vpc_ciddr
 
 # Requirements: All values  must be low caps
 # Public subnets definitions
