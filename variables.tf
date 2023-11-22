@@ -29,16 +29,6 @@ variable "vpc_name" {
   }
 #End VPC bucket name
 
-#VPC Ciddr
-variable "vpc_ciddr" {
-   type = string
-   description = "VPC CIDDR block"
-  }
-#End
-
-
-
-
 #Public subnets
 variable "public_subnets" {
   description = "Public subnets"
