@@ -19,7 +19,7 @@ output "nat_gateway_id" {
   value       = module.vpc.nat_gateway_id
 }
 
-output "vpc_ciddr_block" {
+output "vpc_cidr_block" {
   value = module.vpc.vpc_cidr_block
 }
 
