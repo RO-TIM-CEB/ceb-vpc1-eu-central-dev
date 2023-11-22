@@ -25,7 +25,7 @@ provider "aws" {
 
 
 module "vpc" {
-  source = "git::https://github.com/RO-TIM-CEB/tf-aws-dev-ceb-vpc-module.git?ref=main"
+  source = "git@github.com:RO-TIM-CEB/ceb-vpc1-eu-central-dev.git?ref=main"
   
 # Important note:
 # If you want to change optional values, you must know what you are doing.
