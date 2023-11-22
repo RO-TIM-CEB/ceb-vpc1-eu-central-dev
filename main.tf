@@ -119,6 +119,15 @@ vpc_ciddr = var.ciddr
     "atos:subnet:private:technical:connectivity_type"     = "private"
     "atos:subnet:private:technical:nat"                   = "nat gateway"
   }
+  # End VPC Technical Private Subnets TAGS   
+  
+  
+  # VPC Technical Private Subnets TAGS
+  technical_tags = {
+    "atos:technical:deployment_method"                    = "terraform"
+    "atos:technical:stack"                                = "development"
+    
+  }
   # End VPC Technical Private Subnets TAGS    
 
 
