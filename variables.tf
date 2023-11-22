@@ -52,3 +52,11 @@ variable "private_subnets" {
   }))
 }
 #End Private subnets
+
+#VPC Ciddr
+variable "vpc_ciddr" {
+   type = string
+   description = "VPC CIDDR block"
+    
+}
+#End
