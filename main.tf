@@ -1,11 +1,15 @@
 terraform {
-
- required_providers {
+  required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = ">= 3.0.0"
     }
+    github = {
+      source = "integrations/github"
+      version = "~> 5.0"
+    }
   }
+
   backend "s3" {
     bucket = "state-terraform-s3-ceb-vpc-dev"
     key    = "dev/europe/central-1/ceb-vpc1-eu-central-dev"
@@ -13,23 +17,12 @@ terraform {
   }
 
   required_version = "~> 1.6.0"  # Specify the minimum required Terraform version here
-  required_providers {
-    github = {
-      source = "integrations/github"
-      version = "~> 5.0"
-    }
-    aws = {
-      source  = "hashicorp/aws"
-      version = ">= 3.0.0"  # Specify the desired version constraint for AWS provider here
-    }
-  }
 }
 
 provider "aws" {
   region  = var.region
   profile = var.profile
 }
-
 
 module "vpc" {
   source = "git@github.com:RO-TIM-CEB/tf-aws-dev-ceb-vpc-module.git?ref=main"
