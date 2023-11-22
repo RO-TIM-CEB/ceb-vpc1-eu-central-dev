@@ -18,3 +18,8 @@ output "nat_gateway_id" {
   description = "NAT gateway ID"
   value       = module.vpc.nat_gateway_id
 }
+
+output "vpc_cidr_block" {
+  value = module.vpc.cidr_block
+}
+

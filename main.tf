@@ -133,12 +133,12 @@ vpc_ciddr = var.ciddr
 
 # VPC Security TAGS
   security_vpc_tags  = {
-    "atos:security:compliance"             = "none"
-    "atos:security:classification"         = "restricted"
-    "atos:security:encryption"             = "encrypted"
-    "atos:security:level"                  = "medium"
-    "atos:security:incident_response"      = "adrian mendyk"
-    "atos:security:access_control"         = "private access"
+    "atos:vpc:security:compliance"             = "none"
+    "atos:vpc:security:classification"         = "restricted"
+    "atos:vpc:security:encryption"             = "encrypted"
+    "atos:vpc:security:level"                  = "medium"
+    "atos:vpc:security:incident_response"      = "adrian mendyk"
+    "atos:vpc:security:access_control"         = "private access"
   }
   # End VPC Security TAGS        
 
