@@ -20,6 +20,6 @@ output "nat_gateway_id" {
 }
 
 output "vpc_ciddr_block" {
-  value = module.vpc.vpc_ciddr_block
+  value = module.vpc.vpc_cidr_block
 }
 
