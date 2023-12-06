@@ -4,7 +4,7 @@
 region                   = "eu-central-1"
 profile                  = "ceb-dev"
 terraform_module_version = "v0.1.0"
-vpc_name                 = "ceb-central-development"
+vpc_name                 = "central-development"
 
 # Networking variables
 vpc_ciddr = "192.168.0.0/16"
