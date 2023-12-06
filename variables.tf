@@ -7,50 +7,6 @@ variable "region" {
 #End AWS region
 
 
-#Public subnet standard starting name
-variable "public_subnet_standard_name" {
-  type        = string
-  description = "Standard public subnet name"
-}
-# End Public subnet standard starting name
-
-
-#Private subnet standard starting name
-variable "private_subnet_standard_name" {
-  type        = string
-  description = "Standard private subnet name"
-}
-# End Private subnet standard starting name
-
-
-#Internet gateway standard starting name
-variable "internet_gateway_standard_name" {
-  type        = string
-  description = "Standard internet gateway name"
-}
-# End Internet gateway standard starting name
-
-#AWS NAT gateway standard starting name
-variable "nat_gateway_standard_name" {
-  type        = string
-  description = "Standard NAT gateway name"
-}
-# End AWS NAT gateway standard starting name
-
-#Private route table standard starting name
-variable "private_route_table_standard_name" {
-  type        = string
-  description = "Private route routing tables name"
-}
-# End Private route table standard starting name
-
-#Public route table standard starting name
-variable "public_route_table_standard_name" {
-  type        = string
-  description = "Public route routing tables name"
-}
-# End Public route table standard starting name
-
 
 
 
