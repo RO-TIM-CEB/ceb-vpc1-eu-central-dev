@@ -16,7 +16,7 @@ terraform {
     region = "eu-central-1"
   }
 
-  required_version = "~> 1.6.0"  # Specify the minimum required Terraform version here
+  required_version = "~> 1.8.0"  # Specify the minimum required Terraform version here
 }
 
 provider "aws" {
@@ -26,7 +26,7 @@ provider "aws" {
 
 module "vpc" {
   source = "git@github.com:RO-TIM-CEB/tf-aws-dev-ceb-vpc-module.git?ref=main"
-  
+
 # Important note:
 # If you want to change optional values, you must know what you are doing.
 
@@ -38,7 +38,7 @@ module "vpc" {
 # AWS profile
   profile                    = var.profile           # Allowed profile names: ceb-dev, ceb-staging and ceb-prod
 # End AWS profile
-# Region 
+# Region
   region                     = var.region                  # Allowed values us-west-2, eu-west-1 ad eu-central-1 
 # End Region
 # End MANDATORY
@@ -100,7 +100,7 @@ vpc_ciddr = var.vpc_ciddr
     "atos:vpc:technical:vpn_connection"      = "disabled"
     "atos:vpc:technical:peering"             = "disabled"
   }
-  # End VPC Technical TAGS  
+  # End VPC Technical TAGS
 
 
 # VPC Technical Public Subnets TAGS
@@ -110,7 +110,7 @@ vpc_ciddr = var.vpc_ciddr
    "atos:subnet:public:technical:connectivity_type"     = "public"
    "atos:subnet:public:technical:internet_gateway"      = "enabled"
   }
-  # End VPC Technical Public Subnets TAGS   
+  # End VPC Technical Public Subnets TAGS
 
 # VPC Technical Private Subnets TAGS
   technical_private_subnet_tags = {
@@ -119,16 +119,15 @@ vpc_ciddr = var.vpc_ciddr
     "atos:subnet:private:technical:connectivity_type"     = "private"
     "atos:subnet:private:technical:nat"                   = "nat gateway"
   }
-  # End VPC Technical Private Subnets TAGS   
-  
-  
+  # End VPC Technical Private Subnets TAGS
+
   # VPC Technical Private Subnets TAGS
   technical_tags = {
     "atos:technical:deployment_method"                    = "terraform"
     "atos:technical:stack"                                = "development"
-    
+
   }
-  # End VPC Technical Private Subnets TAGS    
+  # End VPC Technical Private Subnets TAGS
 
 
 # VPC Security TAGS
@@ -140,7 +139,7 @@ vpc_ciddr = var.vpc_ciddr
     "atos:vpc:security:incident_response"      = "adrian mendyk"
     "atos:vpc:security:access_control"         = "private access"
   }
-  # End VPC Security TAGS        
+  # End VPC Security TAGS
 
 
 # VPC Billing TAGS
@@ -150,5 +149,5 @@ vpc_ciddr = var.vpc_ciddr
     "atos:billing:contact_name"             = "radoslaw wieckowski"
     "atos:billing:contact_email"            = "radoslaw.wieckowski@atos.net"
   }
-  # End VPC Billing TAGS        
+  # End VPC Billing TAGS
 }

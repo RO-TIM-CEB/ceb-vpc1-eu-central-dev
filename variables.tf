@@ -2,29 +2,15 @@
 variable "region" {
   type        = string
    description = "Region"
- 
+
 }
 #End AWS region
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #AWS profile
 variable "profile" {
   type        = string
    description = "What AWS profile to use"
-  
+
 }
 #End AWS profile
 
